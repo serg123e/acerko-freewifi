@@ -41,6 +41,6 @@
     /ip hotspot user add name=guest
 }
 
-:if ([/ip hotspot walled-garden ip find dst-address=139.144.176.154] = "") do={
-    /ip hotspot walled-garden ip add action=accept disabled=no dst-address=139.144.176.154
+:if ([/ip hotspot walled-garden ip find comment="external portal"] = "") do={
+    /ip hotspot walled-garden ip add action=accept disabled=no dst-address=139.144.176.154 comment="external portal"
 }

@@ -11,7 +11,7 @@ echo "copying config script"
 pscp -l $routerAdminUser -pw $routerAdminPassword -scp hotspot.rsc $routerIpAddress:/
 
 #echo "configuring hotspot"
-plink -pw $routerAdminPassword $routerAdminUser@$routerIpAddress "/import verbose=yes hotspot.rsc" < y.txt
+plink -pw $routerAdminPassword $routerAdminUser@$routerIpAddress "/import verbose=yes hotspot.rsc" 
 
 
 #echo "configuring hotspot"
